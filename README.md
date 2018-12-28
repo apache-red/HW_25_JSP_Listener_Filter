@@ -1,4 +1,4 @@
-# # HomeWorkLesson_18
+# HW_25_JSP_Listener_Filter
 Задание:
 Lesson 25 - Реализовать небольшой web проект, в качестве конфигурации использовать web.xml
             
