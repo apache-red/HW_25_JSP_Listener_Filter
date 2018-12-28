@@ -13,12 +13,12 @@ public class Listener implements ServletRequestListener {
     @Override
     public void requestDestroyed(ServletRequestEvent sre) {
         HttpServletRequest httpServletRequest = (HttpServletRequest)   sre.getServletRequest();
-        System.out.println("Request from "+ httpServletRequest.getContextPath()+ "was destroyed");
+        System.out.println("Request from "+ httpServletRequest.getContextPath()+ " was destroyed");
     }
 
     @Override
     public void requestInitialized(ServletRequestEvent sre) {
         HttpServletRequest httpServletRequest = (HttpServletRequest)   sre.getServletRequest();
-        System.out.println("Request from "+ httpServletRequest.getContextPath()+ "was created.");
+        System.out.println("Request from "+ httpServletRequest.getContextPath()+ " was created.");
     }
 }
