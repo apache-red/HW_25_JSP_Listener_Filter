@@ -15,7 +15,7 @@
     </welcome-file-list>
     
     <servlet>
-        <display-name>My_controller</display-name>
+        <display-name>Controller</display-name>
         <servlet-name>Controller</servlet-name>
         <servlet-class>controller.Controller</servlet-class>
     </servlet>
@@ -25,9 +25,33 @@
         <url-pattern>/Controller</url-pattern>
     </servlet-mapping>
 
-    <listener>
-        <listener-class>listeners.Listener</listener-class>
-    </listener>
+    <!--<listener>-->
+        <!--<listener-class>listeners.Listener</listener-class>-->
+    <!--</listener>-->
 
+
+    <filter>
+        <display-name>RequestLoggingFilter</display-name>
+        <filter-name>RequestLoggingFilter</filter-name>
+        <filter-class>filters.RequestLoggingFilter</filter-class>
+    </filter>
+    <filter>
+        <display-name>CharsetFilter</display-name>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>filters.CharsetFilter</filter-class>
+        <init-param>
+            <param-name>charsetEncoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/Controller</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RequestLoggingFilter</filter-name>
+        <url-pattern>/Controller</url-pattern>
+    </filter-mapping>
 
 </web-app>

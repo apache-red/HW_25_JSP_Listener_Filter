@@ -9,13 +9,15 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html"; charset=" ISO-8859-1">
-    <title>Listener</title>
+    <title>Filter</title>
   </head>
   <body>
 
   <form action="Controller" method="post">
-    <input type="submit" value="sent text reques" /><br/>
 
+    Name: <input type="text" name="name" value=""/> <br/>
+    Surname: <input type="text" name="surname" value=""/> <br/>
+    <input type="submit" value="sent text reques" /><br/>
   </form>
 
   </body>
